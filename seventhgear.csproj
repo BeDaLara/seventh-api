@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<!-- Para o Swagger -->
+		<NoWarn>$(NoWarn);1591</NoWarn>
+		<!-- Ignora avisos de documentação XML -->
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- Pacotes de E-mail -->
+		<PackageReference Include="MailKit" Version="4.3.0" />
+		<PackageReference Include="MimeKit" Version="4.3.0" />
+
+		<!-- Entity Framework Core 8 (estável para .NET 8) -->
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.4" />
+		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.0" />
+
+		<!-- Swagger (OpenAPI) -->
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+
+		<!-- Ferramentas do EF Core (para migrações) -->
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.4">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+</Project>
